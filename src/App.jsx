@@ -1,6 +1,6 @@
-
 import exx from '/exx.jpg'
 import './App.css'
+import { beckend, database, frontend, language } from './data'
 
 function App() {
 
@@ -35,64 +35,47 @@ function App() {
         <p className="w3-large"><b>
           <i classNme="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
         <h2 className='w3 w3-text-teal'>Frontend</h2>
-        
-        <p>React</p>
-        <div classNme="w3-light-grey w3-round-xlarge w3-small">
-          <div className="w3-container w3-center w3-round-xlarge w3-teal" style={{width:80}}>
-            <div className="w3-center w3-text-white">80%</div>
-          </div>
-        </div>
-  
-        <p>Angular</p>
+        {  frontend.map((f, index)=>
+        <div key={index}>
+        <p>{f.name}</p>
         <div className="w3-light-grey w3-round-xlarge w3-small">
-          <div className="w3-container w3-center w3-round-xlarge w3-teal" style={{width:45}}>40%</div>
+          <div className="w3-container w3-center w3-round-xlarge w3-teal" style={{width: f.width}}>{f.width}%</div>
         </div>
-       <br/>
+        </div>
+        )}
 
        <h2 className='w3 w3-text-teal' >Beckend</h2>
+        {  beckend.map((b, index)=>
+        <div key={index}>
+        <p>{b.name}</p>
+        <div className="w3-light-grey w3-round-xlarge w3-small">
+          <div className="w3-container w3-center w3-round-xlarge w3-teal" style={{width: b.width}}>{b.width}%</div>
+        </div>
+        </div>
+        )}
+
         
-
-        <p>Node.js</p>
-        <div className="w3-light-grey w3-round-xlarge w3-small">
-          <div className="w3-container w3-center w3-round-xlarge w3-teal" style={{width:75}}>75%</div>
-        </div>
-
-        <p>Graphql</p>
-        <div className="w3-light-grey w3-round-xlarge w3-small">
-          <div className="w3-container w3-center w3-round-xlarge w3-teal" style={{width:45}}>45%</div>
-        </div>
         <h2 className='w3 w3-text-teal'>Data Base</h2>
-        
-
-        <p>MongoDB</p>
+        {  database.map((db, index)=>
+        <div key={index}>
+        <p>{db.name}</p>
         <div className="w3-light-grey w3-round-xlarge w3-small">
-          <div className="w3-container w3-center w3-round-xlarge w3-teal" style={{width:75}}>75%</div>
+          <div className="w3-container w3-center w3-round-xlarge w3-teal" style={{width: db.width}}>{db.width}%</div>
         </div>
+        </div>
+        )}
 
-        <p>Mysql</p>
-        <div className="w3-light-grey w3-round-xlarge w3-small">
-          <div className="w3-container w3-center w3-round-xlarge w3-teal" style={{width:25}}>25%</div>
-        </div>
 
         <p className="w3-large w3-text-theme"><h2 className='w3 w3-text-teal'>Languages</h2>
           </p>
-        <p>English</p>
-        <div className="w3-light-grey w3-round-xlarge">
-          <div className="w3-round-xlarge w3-teal" style={{height: 24 , width: 60}}>60%</div>
+          {  language.map((l, index)=>
+        <div key={index}>
+        <p>{l.name}</p>
+        <div className="w3-light-grey w3-round-xlarge w3-small">
+          <div className="w3-container w3-center w3-round-xlarge w3-teal" style={{width: l.width}}>{l.width}%</div>
         </div>
-        <p>Romanian</p>
-        <div className="w3-light-grey w3-round-xlarge">
-          <div className="w3-round-xlarge w3-teal" style={{height: 24 , width: 100}}></div>
         </div>
-        <p>Ucrain</p>
-        <div className="w3-light-grey w3-round-xlarge">
-          <div className="w3-round-xlarge w3-teal" style={{height: 24 , width: 70}}></div>
-        </div>
-        <p>Russian</p>
-        <div className="w3-light-grey w3-round-xlarge">
-          <div className="w3-round-xlarge w3-teal" style={{height: 24 , width: 90}}></div>
-        </div>
-
+        )}
         <br/>
       </div>
     </div>
