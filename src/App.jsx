@@ -25,7 +25,7 @@ function App() {
       </div>
       <div className="w3-container">
         <h2 className='w3 w3-text-teal'><i className="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal">
-          </i>Junior Programmer</h2>
+          </i>Frontend Programmer</h2>
         <p><i className="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>ST-Voda, MD</p>
         <p><i className="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal">artb8427@gmail.com
           </i></p>
